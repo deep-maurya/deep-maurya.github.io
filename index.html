@@ -126,10 +126,11 @@
             data-target="#navbarNavDropdown"
             data-toggle="collapse"
             type="button"
+            id="navbar-toggler"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div class="collapse navbar-collapse" id="navbarNavDropdown" data-toggle="collapse">
             <ul class="navbar-nav ml-auto scrollspy" style="align-items: baseline;">
               <li class="nav-item">
                 <a class="nav-link" href="#home"> Home </a>
@@ -148,17 +149,38 @@
               </li>
               <li class="nav-item">
                 <a
-                target="_blank"
-                href="assest/Deepak_Maurya-FullStackWebDeveloper.pdf"
-                class="btn btn-default"
-                >Resume <i class="fa fa-file"></i
-              ></a>
+                  target="_blank"
+                  href="assest/Deepak_Maurya-FullStackWebDeveloper.pdf"
+                  class="btn btn-default"
+                  >Resume <i class="fa fa-file"></i
+                ></a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
+    
+    <!-- Add the following JavaScript at the end of your HTML file or within a script tag -->
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+        var navbarToggler = document.getElementById("navbar-toggler");
+        var navbarCollapse = document.getElementById("navbarNavDropdown");
+    
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            // Check if the navbar is expanded (visible)
+            if (navbarToggler.getAttribute("aria-expanded") === "true") {
+              // Collapse the navbar
+              navbarToggler.click();
+            }
+          });
+        });
+      });
+    </script>
+    
 
     <!-- main layout -->
     <main class="content-3">
@@ -829,7 +851,23 @@
         </div>
       </footer>
     </main>
-
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+        var navbarToggler = document.getElementById("navbar-toggler");
+        var navbarCollapse = document.getElementById("navbarNavDropdown");
+    
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            // Check if the navbar is expanded (visible)
+            if (navbarToggler.getAttribute("aria-expanded") === "true") {
+              // Collapse the navbar
+              navbarToggler.click();
+            }
+          });
+        });
+      });
+    </script>
     <!-- Go to top button -->
     <a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
     <!-- SCRIPTS -->
