@@ -149,11 +149,13 @@
               </li>
               <li class="nav-item">
                 <a
-                  target="_blank"
-                  href="assest/Deepak_Maurya-FullStackWebDeveloper.pdf"
                   class="btn btn-default"
-                  >Resume <i class="fa fa-file"></i
-                ></a>
+                  href="assest/Deepak_Maurya-FullStackWebDeveloper.pdf"
+                  target="_blank"
+                  onclick="openAndDownloadPDF(this.href); return false;"
+                >
+                  Resume <i class="fa fa-file"></i>
+                </a>
               </li>
             </ul>
           </div>
@@ -223,11 +225,15 @@
                     </li>
                     <li class="list-inline-item">
                       <a
-                        target="_blank"
-                        href="assest/Deepak_Maurya-FullStackWebDeveloper.pdf"
-                        class="btn btn-default"
-                        >Resume <i class="fa fa-file"></i
-                      ></a>
+  class="btn btn-default"
+  href="assest/Deepak_Maurya-FullStackWebDeveloper.pdf"
+  target="_blank"
+  onclick="openAndDownloadPDF(this.href); return false;"
+>
+  Resume <i class="fa fa-file"></i>
+</a>
+
+
                     </li>
                   </ul>
                 </div>
@@ -560,6 +566,7 @@
                     <a href="javascript:void(0)">Algorithm Visualizer</a>
                   </h4>
                   <hr />
+                  The Algorithm Visualizer is a web-based tool designed to help users understand and visualize the workings of various algorithms and data structures. Through interactive animations, it demystifies complex concepts and aids in learning and teaching algorithms.
                   <div
                     class="row"
                     style="display: flex; justify-content: space-between"
@@ -599,6 +606,7 @@
                     <a href="javascript:void(0)">Lean & Lift</a>
                   </h4>
                   <hr />
+                  n the modern era, maintaining a healthy lifestyle is increasingly important. With the rise of sedentary jobs and busy schedules, many individuals struggle to manage their health and wellness effectively. Numerous applications provide fitness tracking, diet planning, and wellness tips, but they often personalization. 
                   <div
                     class="row"
                     style="display: flex; justify-content: space-between"
@@ -641,6 +649,7 @@
                     <a href="javascript:void(0)">Innovators Academy</a>
                   </h4>
                   <hr />
+                  Anyone can learn anything. For free." Innovators Academy is Non-profit Orginaztion, Innovators Academy try to provide a free, world-class education to anyone, anywhere.
                   <div
                     class="row"
                     style="display: flex; justify-content: space-between"
@@ -683,6 +692,7 @@
                     <a href="javascript:void(0)">Pin code Details Finder</a>
                   </h4>
                   <hr />
+                  The Pincode Detail project provides detailed information about Indian pincodes. Users can enter a pincode to retrieve information such as the location, state, and other relevant details.
                   <div
                     class="row"
                     style="display: flex; justify-content: space-between"
@@ -725,6 +735,7 @@
                     <a href="javascript:void(0)">Bank IFSC code Search</a>
                   </h4>
                   <hr />
+                  A simple web application to retrieve bank details using IFSC codes, powered by the Razorpay IFSC Code API.
                   <div
                     class="row"
                     style="display: flex; justify-content: space-between"
@@ -851,6 +862,20 @@
         </div>
       </footer>
     </main>
+    <script>
+      function openAndDownloadPDF(url) {
+        // Open the PDF in a new tab
+        window.open(url, '_blank');
+    
+        // Create a temporary link to trigger the download
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Deepak_Maurya_Resume.pdf'; // Specify the download file name
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }
+    </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
